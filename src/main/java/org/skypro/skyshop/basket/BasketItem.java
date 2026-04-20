@@ -2,10 +2,8 @@ package org.skypro.skyshop.basket;
 
 import org.skypro.skyshop.model.product.Product;
 
-import java.util.UUID;
-
 public final class BasketItem {
-    private final Product product;
+    final Product product;
     private final int quantity;
 
     public BasketItem(Product product, int quantity) {

@@ -1,4 +1,4 @@
-package org.skypro.skyshop.model.product;
+package org.skypro.skyshop.basket;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;
