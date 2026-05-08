@@ -40,7 +40,7 @@ public abstract class Product implements Searchable {
         return name;
     }
 
-    public abstract int getPrice();
+    abstract int getPrice();
 
 
     @Override
