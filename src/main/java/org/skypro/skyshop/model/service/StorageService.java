@@ -55,4 +55,8 @@ public class StorageService {
     public Optional<Product> getProductById(UUID id) {
         return Optional.ofNullable(products.get(id));
     }
+
+    public boolean existsById(UUID productId) {
+        return false;
+    }
 }
