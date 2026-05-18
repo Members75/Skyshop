@@ -1,19 +1,37 @@
 package org.skypro.skyshop.controller;
 
-public final class ShopError {
+import java.util.Objects;
 
-    private String code;
-    private String message;
+public class ShopError {
 
-    public ShopError() {
+    private final String code;
+    private final String message;
+
+    public ShopError(String code, String message) {
         this.code = code;
         this.message = message;
     }
 
-    public String getCode() { return code; }
-    public void setCode(String code) { this.code = code; }
-    public String getMessage() { return message; }
-    public void setMessage(String message) { this.message = message; }
+    public String getCode() {
+        return code;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ShopError that = (ShopError) o;
+        return code.equals(that.code) && message.equals(that.message);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(code, message);
+    }
 
     @Override
     public String toString() {
